@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(circle, #636d53 0%, #4a533c 100%);
+    min-height: 100vh;
+}
+
+.menucontainer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Removido o padding e o align-items daqui, quem controla agora é a navbar */
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menulogo {
+    display: flex;
+    align-items: center;
+}
+
+.menulinks {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.menulinks a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.menulinks a:hover {
+    color: #DDA83A;
+}
+
+.logonav {
+    height: 70px;
+    width: auto;
+    display: block;
+    padding: 5px 0;
+}
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.herocontent {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.herocontent h1 {
+    font-family: 'Playfair Display', serif;
+    color: #FFF1A1;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.herocontent p {
+    color: #E0E6ED;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.btnwhatsapp {
+    display: inline-block;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, #FFF1A1 0%, #DDA83A 50%, #9C6A18 100%);
+    color: #1A2417;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btnwhatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(221, 168, 58, 0.4);
+}
+
+.servicossecao {
+    padding: 100px 20px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.servicoscontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulosecao {
+    font-family: 'Playfair Display', serif;
+    color: #FFF1A1;
+    font-size: 2.3rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: 1px;
+}
+
+.servicosgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    grid-auto-rows: min-content;
+}
+
+.cardservico {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(221, 168, 58, 0.15);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardservico:hover {
+    transform: translateY(-8px);
+    border-color: #DDA83A;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cardfoto {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 1px solid rgba(221, 168, 58, 0.1);
+}
+
+.cardfoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.cardservico:hover .cardfoto img {
+    transform: scale(1.06);
+}
+
+
+.cardservico h3 {
+    font-family: 'Playfair Display', serif;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.cardservico p {
+    color: #E0E6ED;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logonav {
+        height: 40px;
+    }
+
+    .menulinks {
+        gap: 20px;
+    }
+
+    .menulinks a {
+        font-size: 0.85rem;
+    }
+
+    .sobre {
+        min-height: auto;
+        padding: 40px 15px;
+    }
+
+    #logo {
+        max-width: 240px;
+        margin-bottom: 20px;
+    }
+
+    .herocontent h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .herocontent p {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    .btnwhatsapp {
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 20px;
+        font-size: 0.85rem;
+    }
+
+    .servicossecao {
+        padding: 60px 15px;
+    }
+
+    .titulosecao {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .servicosgrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .cardservico {
+        padding: 30px 20px;
+    }
+}
