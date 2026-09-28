@@ -314,6 +314,36 @@ body {
     width: 100%;
 }
 
+.rodapefinal {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.rodapefinal p {
+    color: #A0AAB5;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+
+.rodapefinal span, 
+.rodapefinal a {
+    color: #FFF1A1;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.rodapefinal a:hover {
+    color: #DDA83A;
+}
+
+
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 20px;
