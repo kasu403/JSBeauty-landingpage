@@ -169,9 +169,11 @@ body {
     border-color: #DDA83A;
 }
 
-#olhar:checked ~ .abas-menu label[for="olhar"],
-#facial:checked ~ .abas-menu label[for="facial"],
-#pele:checked ~ .abas-menu label[for="pele"] {
+#olhar:checked ~ .abasmenu label[for="olhar"],
+#facial:checked ~ .abasmenu label[for="facial"],
+#pele:checked ~ .abasmenu label[for="pele"],
+#corpo:checked ~ .abasmenu label[for="corpo"],
+#cabelo:checked ~ .abasmenu label[for="cabelo"]{
     background: linear-gradient(135deg, #FFF1A1 0%, #DDA83A 50%, #9C6A18 100%);
     color: #1A2417;
     font-weight: 500;
@@ -183,7 +185,9 @@ body {
 
 #olhar:checked ~ .abasconteudo .blocoolhar,
 #facial:checked ~ .abasconteudo .blocofacial,
-#pele:checked ~ .abasconteudo .blocopele {
+#pele:checked ~ .abasconteudo .blocopele,
+#corpo:checked ~ .abasconteudo .blococorpo,
+#cabelo:checked ~ .abasconteudo .blococabelo {
     display: block;
 }
 
