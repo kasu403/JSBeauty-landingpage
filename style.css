@@ -18,14 +18,13 @@ body {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    /* Removido o padding e o align-items daqui, quem controla agora é a navbar */
 }
 
 .navbar {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 10px;
+    padding: 10px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,6 +33,12 @@ body {
 .menulogo {
     display: flex;
     align-items: center;
+}
+
+.logonav {
+    height: 50px;
+    width: auto;
+    display: block;
 }
 
 .menulinks {
@@ -53,13 +58,6 @@ body {
 
 .menulinks a:hover {
     color: #DDA83A;
-}
-
-.logonav {
-    height: 70px;
-    width: auto;
-    display: block;
-    padding: 5px 0;
 }
 
 .sobre {
@@ -142,6 +140,53 @@ body {
     letter-spacing: 1px;
 }
 
+.abascontainer input[type="radio"] {
+    display: none;
+}
+
+.abasmenu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.abasmenu label {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(221, 168, 58, 0.2);
+    padding: 12px 24px;
+    border-radius: 30px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.abasmenu label:hover {
+    border-color: #DDA83A;
+}
+
+#olhar:checked ~ .abas-menu label[for="olhar"],
+#facial:checked ~ .abas-menu label[for="facial"],
+#pele:checked ~ .abas-menu label[for="pele"] {
+    background: linear-gradient(135deg, #FFF1A1 0%, #DDA83A 50%, #9C6A18 100%);
+    color: #1A2417;
+    font-weight: 500;
+}
+
+.conteudobloco {
+    display: none;
+}
+
+#olhar:checked ~ .abasconteudo .blocoolhar,
+#facial:checked ~ .abasconteudo .blocofacial,
+#pele:checked ~ .abasconteudo .blocopele {
+    display: block;
+}
+
 .servicosgrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -155,6 +200,10 @@ body {
     padding: 40px 30px;
     border-radius: 15px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 520px;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -171,6 +220,7 @@ body {
     overflow: hidden;
     margin-bottom: 25px;
     border: 1px solid rgba(221, 168, 58, 0.1);
+    flex-shrink: 0;
 }
 
 .cardfoto img {
@@ -183,7 +233,6 @@ body {
 .cardservico:hover .cardfoto img {
     transform: scale(1.06);
 }
-
 
 .cardservico h3 {
     font-family: 'Playfair Display', serif;
@@ -200,10 +249,70 @@ body {
     line-height: 1.6;
 }
 
+.localizacaosecao {
+    padding: 80px 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.localizacaocontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.localizacaobloco {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(221, 168, 58, 0.1);
+}
+
+.localizacaoinfo {
+    flex: 1;
+}
+
+.localizacaoinfo h3 {
+    font-family: 'Playfair Display', serif;
+    color: #FFF1A1;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.localizacaoinfo p {
+    color: #E0E6ED;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.btnmapa {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #DDA83A;
+    color: #DDA83A;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btnmapa:hover {
+    background-color: #DDA83A;
+    color: #1A2417;
+}
+
+.localizacaomapa {
+    flex: 1;
+    width: 100%;
+}
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px 20px;
+        padding: 15px 20px;
         flex-direction: column;
         gap: 15px;
     }
@@ -257,6 +366,11 @@ body {
         margin-bottom: 40px;
     }
 
+    .abasmenu {
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+
     .servicosgrid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -264,5 +378,12 @@ body {
     
     .cardservico {
         padding: 30px 20px;
+        min-height: auto;
+    }
+
+    .localizacaobloco {
+        flex-direction: column;
+        padding: 20px;
+        gap: 25px;
     }
 }
